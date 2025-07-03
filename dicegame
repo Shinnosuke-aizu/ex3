@@ -1,0 +1,22 @@
+import java.util.Random;
+
+public class DiceGame {
+    public static void main(String[] args) {
+        System.out.println("Rolling dice...");
+
+        // Create a Random object
+        Random random = new Random();
+
+        // Generate two random numbers between 1 and 6
+        int die1 = random.nextInt(6) + 1; // 1 to 6
+        int die2 = random.nextInt(6) + 1; // 1 to 6
+
+        // Calculate total
+        int total = die1 + die2;
+
+        // Print the results
+        System.out.println("Die 1: " + die1);
+        System.out.println("Die 2: " + die2);
+        System.out.println("Total value: " + total);
+    }
+}
