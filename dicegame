@@ -1,20 +1,25 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class DiceGame {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask for the user's name
+        System.out.print("What is your name?\n> ");
+        String name = scanner.nextLine();
+
+        // Greet the user
+        System.out.println("Hello, " + name + "!");
+
+        // Simulate rolling dice
         System.out.println("Rolling dice...");
 
-        // Create a Random object
         Random random = new Random();
-
-        // Generate two random numbers between 1 and 6
-        int die1 = random.nextInt(6) + 1; // 1 to 6
-        int die2 = random.nextInt(6) + 1; // 1 to 6
-
-        // Calculate total
+        int die1 = random.nextInt(6) + 1;
+        int die2 = random.nextInt(6) + 1;
         int total = die1 + die2;
 
-        // Print the results
         System.out.println("Die 1: " + die1);
         System.out.println("Die 2: " + die2);
         System.out.println("Total value: " + total);
